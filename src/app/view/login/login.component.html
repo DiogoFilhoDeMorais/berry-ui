@@ -1,1 +1,76 @@
-<p>login works!</p>
+<div class="container">
+  <img
+    src="../../../assets/berry_logo_tr_150x56px.png"
+    alt="Berry"
+    class="logo"
+  />
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="submitForm(); loginForm.reset()"
+    autocomplete="off"
+  >
+    <h2>Welcome to Berry</h2>
+    <div class="content">
+      <h3><strong>Login</strong></h3>
+      <hr />
+
+      <div>
+        <label class="form-label">Username</label>
+        <br />
+        <input
+          type="text"
+          class="username"
+          id="username"
+          formControlName="username"
+          placeholder="Write an username"
+          required
+        />
+      </div>
+
+      <div>
+        <label class="form-label">Password</label>
+        <br />
+        <input
+          type="password"
+          class="password"
+          id="password"
+          formControlName="password"
+          placeholder="Enter 6 characters or more"
+          required
+        />
+        <br />
+        <a href="">Forgot Password?</a>
+      </div>
+
+      <hr />
+      <button type="button" class="login"><strong>LOGIN</strong></button>
+
+      <br /><br />
+
+      <span class="or-text">or login with</span>
+      <div class="alternativeLoggin">
+        <div class="google">
+          <a routerLink="/google"
+            ><img
+              src="../../../assets/google.png"
+              style="cursor: pointer"
+              class="logo_alt"
+            />
+            <strong> Google</strong></a
+          >
+        </div>
+
+        <div class="facebook">
+          <a routerLink="/google"
+            ><img
+              src="../../../assets/facebook.png"
+              style="cursor: pointer"
+              class="logo_alt"
+            />
+            <strong> Facebook</strong></a
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

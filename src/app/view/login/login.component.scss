@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  //   text-align: center;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid red;
+  height: 500px;
+  width: 350px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.logo_alt {
+  height: 20px;
+}
+
+input {
+  width: 320px;
+}
+
+.or-text {
+  display: block;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.google {
+  border: 1px solid red;
+}
+
+button {
+  background-color: #d30a5b;
+  border: 0.8px solid #d30a5b;
+  border-radius: 7px;
+  color: azure;
+  cursor: pointer;
+  height: 38px;
+  width: 300px;
+}
+
+.alternativeLoggin {
+  display: flex;
+  justify-content: center;
+}
+
+.google {
+  border: 1px solid red;
+  width: 100px;
+  margin: 10px;
+  border-radius: 6px;
+  height: 45px;
+  width: 150px;
+}
+.google a {
+  color: red;
+}
+
+.facebook {
+  border: 1px solid #3b5998;
+  width: 100px;
+  margin: 10px;
+  border-radius: 6px;
+  height: 45px;
+  width: 150px;
+}
+
+.facebook a {
+  color: #3b5998;
+}
