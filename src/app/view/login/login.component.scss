@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  //   text-align: center;
+  text-align: center;
   flex-direction: column;
-  position: absolute;
   align-items: center;
+  position: absolute;
   justify-content: center;
+  border: 1px solid #d30a5b;
   border-radius: 10px;
-  border: 1px solid red;
   height: 500px;
-  width: 350px;
+  width: 400px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -16,61 +16,28 @@
   margin: auto;
 }
 
-.logo_alt {
-  height: 20px;
-}
-
-input {
-  width: 320px;
-}
-
-.or-text {
-  display: block;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-}
-
-.google {
-  border: 1px solid red;
+.container > img {
+  cursor: pointer;
 }
 
 button {
-  background-color: #d30a5b;
-  border: 0.8px solid #d30a5b;
-  border-radius: 7px;
-  color: azure;
-  cursor: pointer;
   height: 38px;
   width: 300px;
+  background-color: #d30a5b !important;
 }
 
-.alternativeLoggin {
+.username__input,
+.password__input {
+  width: 90%;
+}
+
+.forgot-password {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin: 5px 20px 0 0;
 }
 
-.google {
-  border: 1px solid red;
-  width: 100px;
-  margin: 10px;
-  border-radius: 6px;
-  height: 45px;
-  width: 150px;
-}
-.google a {
-  color: red;
-}
-
-.facebook {
-  border: 1px solid #3b5998;
-  width: 100px;
-  margin: 10px;
-  border-radius: 6px;
-  height: 45px;
-  width: 150px;
-}
-
-.facebook a {
-  color: #3b5998;
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: green !important;
 }

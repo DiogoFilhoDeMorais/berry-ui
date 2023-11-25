@@ -13,18 +13,22 @@ import { UserInterface } from 'src/app/shared/user.interface';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
+  loginForm = this.fb.group({
+    username: [''],
+    password: [''],
+  });
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.loginForm = new FormGroup({
-      username: new FormControl(''),
-      password: new FormControl(''),
+    this.loginForm = this.fb.group({
+      username: ['', [Validators.required, Validators.pattern('[a-zA-Z].*')]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
-
   submitForm() {
     if (this.loginForm.valid) {
-      console.log('onSubmit succes');
+      // Perform actions when the form is valid
     } else {
       // Handle form errors or invalid submission
     }
