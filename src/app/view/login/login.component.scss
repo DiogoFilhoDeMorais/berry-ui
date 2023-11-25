@@ -36,8 +36,3 @@ button {
   justify-content: flex-end;
   margin: 5px 20px 0 0;
 }
-
-::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
-  background-color: green !important;
-}
