@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { DataStorageService } from 'src/app/core/dataService.service';
 import { UserInterface } from 'src/app/shared/user.interface';
 
 @Component({
@@ -14,8 +15,15 @@ import { UserInterface } from 'src/app/shared/user.interface';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  private users: UserInterface[] = [];
+
+  constructor(private dataStorageService: DataStorageService) {}
 
   ngOnInit() {
+    this.dataStorageService.getUsers().subscribe((userAPI) => {
+      this.users = userAPI.users;
+    });
+
     this.loginForm = new FormGroup({
       username: new FormControl('', [
         Validators.required,
