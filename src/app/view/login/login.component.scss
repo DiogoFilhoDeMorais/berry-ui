@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  border: 1px solid #d30a5b;
+  border-radius: 10px;
+  height: 500px;
+  width: 400px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.container > img {
+  cursor: pointer;
+}
+
+button {
+  height: 38px;
+  width: 300px;
+  background-color: #d30a5b !important;
+}
+
+.username__input,
+.password__input {
+  width: 90%;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 20px 0 0;
+}
