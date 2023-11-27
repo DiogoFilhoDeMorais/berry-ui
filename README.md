@@ -1,4 +1,10 @@
-# BerryUi
+# Berry-UI
+
+## About
+
+This is mentoring project to trail a Junior Developer growth in his knowledge with Angular framework, NgRx, Material Design and NodeJS API for back-end.
+
+## Code base
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
