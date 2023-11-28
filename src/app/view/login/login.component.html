@@ -1,52 +1,56 @@
 <div class="container">
-  <img
-    routerLink="/home"
-    src="../../../assets/berry_logo_tr_150x56px.png"
-    alt="Berry"
-    class="logo"
-  />
-  <form
-    [formGroup]="loginForm"
-    (ngSubmit)="submitForm(); loginForm.reset()"
-    autocomplete="off"
-  >
-    <h2>Welcome to Berry</h2>
-    <br />
-    <br />
-    <h2><strong>Login</strong></h2>
-    <!-- <hr /> -->
+  <div class="login">
+    <img
+      routerLink="/home"
+      src="../../../assets/berry_logo_tr_150x56px.png"
+      alt="Berry"
+      class="logo"
+    />
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="submitForm(); loginForm.reset()"
+      autocomplete="off"
+    >
+      <h2>Welcome to Berry</h2>
+      <!-- <br />
+      <br /> -->
+      <h2><strong>Login</strong></h2>
+      <!-- <hr /> -->
 
-    <mat-form-field class="username__input">
-      <mat-label>Username</mat-label>
-      <input
-        matInput
-        formControlName="username"
-        placeholder="Write a username"
-        required
-      />
-      <mat-error *ngIf="loginForm.get('username')?.invalid"
-        >Please enter a username</mat-error
-      >
-    </mat-form-field>
+      <mat-form-field class="username__input">
+        <mat-label>Username</mat-label>
+        <!-- Isn't to use e-mail better then username? -->
+        <input
+          matInput
+          formControlName="username"
+          placeholder="Write a username"
+          required
+        />
+        <mat-error *ngIf="loginForm.get('username')?.invalid"
+          >Please enter a username</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field class="password__input">
-      <mat-label>Password</mat-label>
-      <input
-        matInput
-        formControlName="password"
-        type="password"
-        placeholder="Must have at least 6 characters"
-        required
-      />
-      <mat-error *ngIf="loginForm.get('password')?.invalid"
-        >Please enter a password</mat-error
-      >
-    </mat-form-field>
-    <div class="forgot-password">
-      <a routerLink="/home" routerLinkActive="active">Forgot Password?</a>
-    </div>
+      <mat-form-field class="password__input">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="Must have at least 6 characters"
+          required
+        />
+        <mat-error *ngIf="loginForm.get('password')?.invalid"
+          >Please enter a password</mat-error
+        >
+      </mat-form-field>
 
-    <hr />
-    <button mat-raised-button color="primary" type="submit">LOGIN</button>
-  </form>
+      <!-- This line is necessary on design? -->
+      <!-- <hr /> -->
+      <button mat-raised-button color="accent" type="submit">LOGIN</button>
+    </form>
+  </div>
+  <div class="forgot-password">
+    <a routerLink="/home" routerLinkActive="active">Forgot Password?</a>
+  </div>
 </div>
