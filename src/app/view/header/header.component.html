@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <a routerLink="/home" class="logo">
+      <img src="../../../assets/berry_logo_tr_150x56px.png" alt=""
+    /></a>
+    <nav>
+      <ul>
+        <li>
+          <a (click)="openLoginDialog()">Login</a>
+        </li>
+        <li class="menu-container">
+          <a routerLink="/dashboard">Silviu</a>
+          <div class="menu">
+            <a routerLink="/profile">Profile</a>
+            <a routerLink="/orders">Orders</a>
+            <a>Logout</a>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page">Cart <span>3</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

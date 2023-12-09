@@ -11,15 +11,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { HeaderComponent } from './view/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,6 +33,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     MatCheckboxModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatDialogModule,
+
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),

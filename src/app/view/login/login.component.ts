@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -7,6 +7,8 @@ import {
 } from '@angular/forms';
 import { DataStorageService } from 'src/app/core/dataService.service';
 import { UserInterface } from 'src/app/shared/user.interface';
+
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'login',
@@ -17,7 +19,11 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   private users: UserInterface[] = [];
 
-  constructor(private dataStorageService: DataStorageService) {}
+  constructor(
+    private dataStorageService: DataStorageService,
+    private matDialogRef: MatDialogRef<LoginComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {}
 
   ngOnInit() {
     this.dataStorageService.getUsers().subscribe((userAPI) => {
