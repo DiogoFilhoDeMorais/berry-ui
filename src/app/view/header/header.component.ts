@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   openLoginDialog(): void {
     const dialogRef = this.dialog.open(LoginComponent, {
-      height: '550px',
+      height: '500px',
       width: '500px',
     });
 

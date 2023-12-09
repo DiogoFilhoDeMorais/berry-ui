@@ -20,6 +20,8 @@ import { LoginComponent } from './view/login/login.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HeaderComponent } from './view/header/header.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, HeaderComponent],
   imports: [
@@ -34,6 +36,7 @@ import { HeaderComponent } from './view/header/header.component';
     MatButtonModule,
     MatFormFieldModule,
     MatDialogModule,
+    FlexLayoutModule,
 
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
