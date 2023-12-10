@@ -1,0 +1,141 @@
+// header {
+//   background-color: #f8f9fa;
+//   padding: 20px 0;
+
+//   .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   .logo {
+//     img {
+//       height: 56px;
+//     }
+//   }
+
+//   nav {
+//     ul {
+//       list-style: none;
+//       display: flex;
+//       gap: 20px;
+
+//       li {
+//         a {
+//           text-decoration: none;
+//           color: #333;
+
+//           &:hover {
+//             color: #007bff;
+//           }
+//         }
+
+//         &.menu-container {
+//           position: relative;
+
+//           .menu {
+//             display: none;
+//             position: absolute;
+//             top: 100%;
+//             left: 0;
+//             background-color: #f8f9fa;
+//             padding: 10px;
+//             border-radius: 4px;
+//             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+//             a {
+//               display: block;
+//               margin-bottom: 10px;
+
+//               &:last-child {
+//                 margin-bottom: 0;
+//               }
+//             }
+
+//             &:hover {
+//               display: block;
+//             }
+//           }
+
+//           &:hover .menu {
+//             display: block;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// ###########
+
+header {
+  position: relative;
+  background-color: ghostwhite;
+  padding: 0;
+  border-bottom: 3px solid #d30a5b;
+}
+
+a {
+  color: #d30a5b;
+}
+
+li a:hover {
+  background: #d30a5b;
+  color: ghostwhite;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  margin-bottom: -8px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul a {
+  padding: 1rem;
+  display: inline-block;
+}
+
+a span {
+  background: #d30a5b;
+  color: ghostwhite;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size: 0.9rem;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu {
+  background: ghostwhite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+.menu-container:hover .menu {
+  display: block;
+}
+
+.menu a {
+  width: 100%;
+  height: 100%;
+  min-width: 8rem;
+}

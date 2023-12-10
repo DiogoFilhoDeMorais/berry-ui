@@ -1,0 +1,11 @@
+<!-- class="content-for-laptops" fxShow fxHide.gt-sm -->
+<div fxShow.gt-xs>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- class="content-for-mobile" fxShow fxHide.lt-md -->
+<div fxShow.lt-sm>
+  <!-- ! It still render header, to fix! -->
+  <router-outlet></router-outlet>
+</div>

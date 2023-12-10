@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;500&family=Roboto&family=Young+Serif&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Lora&family=Poppins:wght@300;400;500&family=Roboto&family=Young+Serif&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "ABeeZee", sans-serif;
+}
+
+button {
+  height: 50px !important;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
