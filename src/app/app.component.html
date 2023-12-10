@@ -1,3 +1,17 @@
+<<<<<<< HEAD
 <app-header></app-header>
 
 <router-outlet></router-outlet>
+=======
+<!-- class="content-for-laptops" fxShow fxHide.gt-sm -->
+<div fxShow.gt-xs>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- class="content-for-mobile" fxShow fxHide.lt-md -->
+<div fxShow.lt-sm>
+  <!-- ! It still render header, to fix! -->
+  <router-outlet></router-outlet>
+</div>
+>>>>>>> b3a3f6d8e2541bda543e407c16f147b3e816c6e3
